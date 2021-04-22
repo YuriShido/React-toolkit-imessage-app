@@ -17,6 +17,6 @@ export const chatSlice = createSlice ({
 export const {setChat} =  chatSlice.actions
 
 export const selectChatId = (state) => state.chat.chatId
-export const selctChatName = (state) => state.chat.chatName
+export const selectChatName = (state) => state.chat.chatName
 
 export default chatSlice.reducer
