@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Sidebar from './SideBar';
 import Chat from './Chat'
+import SideBarChat from './SideBarChat';
 //chat component
 
 const MainContainer = styled.div`
@@ -12,6 +13,7 @@ const MainContainer = styled.div`
 const Main = () => (
     <MainContainer>
         <Sidebar />
+        <Chat />
     </MainContainer>
 )
 

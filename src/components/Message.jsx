@@ -40,6 +40,7 @@ const AvatarContainer = styled(Avatar)`
     order: 1;
     margin: 15px;
   `}
+  
 `;
 
 const TimeStamp = styled.small`
@@ -56,9 +57,9 @@ const Message = forwardRef(
         const isUser = user.email === email
 
         return(
-            <MessageContainer ref={ref} sender={isUser}>
-                <AvatarContainer src={photo} sender={isUser} />
-                <MessageBubble sender={isUser}>{message}</MessageBubble>
+            <MessageContainer ref={ref} $sender={isUser}>
+                <AvatarContainer src={photo} $sender={isUser ? 1 : 0} />
+                <MessageBubble $sender={isUser}>{message}</MessageBubble>
                 <TimeStamp>
                     {timeago.format(new Date(timestamp?.toDate()))}
                 </TimeStamp>
